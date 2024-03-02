@@ -15,15 +15,14 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     const div = document.createElement("div");
     div.innerHTML = `
-
-    <div class="list">
+  <div class="list">
     <input type="checkbox" ${
       task.completed ? "checked" : ""
     } onchange="toggleTask(${index})">
-      <span class="${task.completed ? "completed" : ""}">${task.text}</span>
-      <button class="Add-button" onclick="deleteTask(${index})">Delete</button>
-                </div>
-                `;
+    <span class="${task.completed ? "completed" : ""}">${task.text}</span>
+    <button class="Add-button" onclick="deleteTask(${index})">Delete</button>
+  </div>
+`;
     taskList.appendChild(div);
   });
 }
