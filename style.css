@@ -1,0 +1,82 @@
+body,
+section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Courier New', Courier, monospace
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-input {
+  box-shadow: inset white 0 0 0 2px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  appearance: none;
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  padding: 9px 12px;
+  line-height: 1.4;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  transition: all 0.2s ease;
+}
+.task-input::placeholder{
+  color: white;
+}
+.task-input:hover {
+  box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
+.task-input:focus {
+  background: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0 #fff inset, #151817 0 0 0 3px;
+}
+
+.Add-button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: rgb(24, 20, 20);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 100px;
+  height: 40px;
+}
+
+.Add-button :hover,
+.Add-button :focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
