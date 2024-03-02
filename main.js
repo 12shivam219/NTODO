@@ -9,6 +9,9 @@ if(e.key==="Enter") {
 }
 })
 
+document.getElementById("addButton").addEventListener("click", addTask);
+
+
 // Render tasks
 function renderTasks() {
   taskList.innerHTML = "";
